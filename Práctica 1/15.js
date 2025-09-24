@@ -1,4 +1,4 @@
-// ❌ CALLBACK (original)
+// CALLBACK (original)
 function leerArchivoCallback(nombreArchivo, callback) {
     setTimeout(() => {
         if (nombreArchivo === "datos.txt") {
@@ -18,7 +18,7 @@ leerArchivoCallback("datos.txt", (error, contenido) => {
     }
 });
 
-// ✅ CONVERTIDO A PROMESA
+// CONVERTIDO A PROMESA
 function leerArchivoPromesa(nombreArchivo) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -34,4 +34,5 @@ function leerArchivoPromesa(nombreArchivo) {
 // USO CON PROMESA
 leerArchivoPromesa("datos.txt")
     .then(contenido => console.log(contenido))
+
     .catch(error => console.error(error));
