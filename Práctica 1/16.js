@@ -1,4 +1,4 @@
-// ❌ CON PROMESAS (original)
+// CON PROMESAS (original)
 function obtenerDatosUsuario(userId) {
     return fetch(`/api/users/${userId}`)
         .then(response => {
@@ -23,7 +23,7 @@ function obtenerDatosUsuario(userId) {
         });
 }
 
-// ✅ CON ASYNC/AWAIT (migrado)
+//CON ASYNC/AWAIT (migrado)
 async function obtenerDatosUsuario(userId) {
     try {
         const response = await fetch(`/api/users/${userId}`);
@@ -48,4 +48,5 @@ async function obtenerDatosUsuario(userId) {
 // USO (igual para ambas)
 obtenerDatosUsuario(123)
     .then(datos => console.log(datos))
+
     .catch(error => console.error(error));
