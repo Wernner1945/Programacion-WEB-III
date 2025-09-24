@@ -1,4 +1,4 @@
-// ❌ CON PROMESAS ANIDADAS (Promise Hell)
+// CON PROMESAS ANIDADAS (Promise Hell)
 function calcularOperacionesComplejas(numero) {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -38,7 +38,7 @@ function calcularOperacionesComplejas(numero) {
     });
 }
 
-// ✅ CON ASYNC/AWAIT (Código limpio)
+// CON ASYNC/AWAIT (Código limpio)
 function esperar(ms, valor) {
     return new Promise(resolve => setTimeout(() => resolve(valor), ms));
 }
@@ -60,4 +60,5 @@ async function calcularOperacionesComplejas(numero) {
 // USO
 calcularOperacionesComplejas(5).then(resultado => {
     console.log('Resultado final:', resultado); // ((5*2 + 10) * 3 - 5) / 2 = 12.5
+
 });
