@@ -1,4 +1,4 @@
-// ❌ PROMESA (original)
+// PROMESA (original)
 function obtenerUsuarioPromesa(id) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -16,7 +16,7 @@ obtenerUsuarioPromesa(1)
     .then(usuario => console.log(usuario))
     .catch(error => console.error(error));
 
-// ✅ CONVERTIDO A CALLBACK
+// CONVERTIDO A CALLBACK
 function obtenerUsuarioCallback(id, callback) {
     setTimeout(() => {
         if (id > 0) {
@@ -34,4 +34,5 @@ obtenerUsuarioCallback(1, (error, usuario) => {
     } else {
         console.log(usuario);
     }
+
 });
